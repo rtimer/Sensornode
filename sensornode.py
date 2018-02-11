@@ -56,8 +56,8 @@ if __name__ == "__main__":
     print("Sending ON")
     client.publish("test/value", str(adc0.read()))
     time.sleep(5)
-    print("deepsleep 120 seconds")
-    rtc.alarm(rtc.ALARM0, 1800000)  # set the RTC alarm or 30 minutes
+    print("deepsleep 1800 seconds")
+    rtc.alarm(rtc.ALARM0, 1800000)  # set the RTC alarm for 30 minutes
     if not debug:
       machine.deepsleep()  # let board deepsleep
 
